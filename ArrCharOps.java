@@ -139,7 +139,17 @@ public class ArrCharOps {
      */     
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
         // Replace the following statement with your code
-        return null;
+        
+        int totelSpace = endIndex - beginIndex;
+
+        char[] subArr = new char[totelSpace];
+
+        for(int a = 0; beginIndex < endIndex; a++) {
+             subArr[a] = arr[beginIndex];
+             beginIndex++;
+        }
+
+        return subArr;
     }
 
      /** Returns a single integer that represents the given array. This integer is sometimes 
