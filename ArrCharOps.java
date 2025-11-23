@@ -65,11 +65,12 @@ public class ArrCharOps {
      *  If no such character is found, returns -1.
      */
     public static int indexOf(char[] arr, char ch) {
-        // Replace the following statement with your code
+        int index = 0;
         for(int a = 0; a < arr.length; a++) {
             if(ch == arr[a]) {
-                return a;
+                return index;
             }
+            index++;
         }
         return -1;
     }
@@ -77,7 +78,12 @@ public class ArrCharOps {
     /** Same as indexOf(char[], char), but starts the search in the given index.
      */
     public static int indexOf(char[] arr, char ch, int fromIndex) {
-        // Replace the following statement with your code
+        while(fromIndex < arr.length) {
+            if(ch == arr[fromIndex]) {
+                return fromIndex;
+            }
+            fromIndex++;
+        }
         return -1;
     }
 
@@ -86,6 +92,21 @@ public class ArrCharOps {
      */
     public static int lastIndexOf(char[] arr, char ch) {
         // Replace the following statement with your code
+        int index = 999;
+        for(int a = 0; a < arr.length; a++) {
+            if (ch == arr[a]) {
+                index = a;
+            }
+        }
+
+        if (index < arr.length && index > 0) {
+            return index;
+        }
+
+        if (index == 0) {
+            return index;
+        }
+
         return -1;
     }
 
