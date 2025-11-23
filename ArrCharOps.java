@@ -36,8 +36,14 @@ public class ArrCharOps {
     /** Returns the char value at the specified index. Assume that the array is non-empty.
      */
     public static char charAt(char[] arr, int index) {
-        // Replace the following statement with your code
-        return 0;
+        char charIndex = 0;
+        for(int i = 0; i < arr.length; i++) {
+            if (i == index) {
+                charIndex = arr[i];
+                break;
+            }
+        }
+        return charIndex;
     }
 
     /** If the two arrays have the same value in every index, 
