@@ -138,7 +138,6 @@ public class ArrCharOps {
      *  characters containing the characters "urge".
      */     
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
-        // Replace the following statement with your code
         
         int totelSpace = endIndex - beginIndex;
 
@@ -161,7 +160,16 @@ public class ArrCharOps {
      */
     public static long hashCode(char[] arr) {
         // Replace the following statement with your code
-        return 0;
+        long sum = 0;
+        int n = arr.length;
+
+        for(int a = 0; a < arr.length; a++) {
+            int b = (int) arr[a];
+            sum = sum + b*(int) Math.pow(7, n-1-a);
+            
+        }
+
+        return sum;
     }
 
     /**
