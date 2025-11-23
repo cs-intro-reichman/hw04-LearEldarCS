@@ -50,7 +50,6 @@ public class ArrCharOps {
      *  returns true; Otherwise returns false.
      */
     public static boolean equals(char[] arr1, char[] arr2) {
-        // Replace the following statement with your code
         boolean pass = true;
         for(int a = 0, b = 0; a < arr1.length; a++, b++) {
             if (arr1[a] != arr2[b]) {
@@ -67,6 +66,13 @@ public class ArrCharOps {
      */
     public static int indexOf(char[] arr, char ch) {
         // Replace the following statement with your code
+        int index = 0;
+        for(int a = 0; a < arr.length; a++) {
+            if(ch == arr[a]) {
+                return index;
+            }
+            index++;
+        }
         return -1;
     }
 
