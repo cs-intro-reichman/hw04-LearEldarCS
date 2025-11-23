@@ -66,12 +66,10 @@ public class ArrCharOps {
      */
     public static int indexOf(char[] arr, char ch) {
         // Replace the following statement with your code
-        int index = 0;
         for(int a = 0; a < arr.length; a++) {
             if(ch == arr[a]) {
-                return index;
+                return a;
             }
-            index++;
         }
         return -1;
     }
