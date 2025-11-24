@@ -159,13 +159,13 @@ public class ArrCharOps {
      *  The hash value of an empty array is zero.
      */
     public static long hashCode(char[] arr) {
-        // Replace the following statement with your code
+
         long sum = 0;
         int n = arr.length;
 
         for(int a = 0; a < arr.length; a++) {
             int b = (int) arr[a];
-            sum = sum + b*(int) Math.pow(7, n-1-a);
+            sum = sum + b * (int) Math.pow(7, n-1-a);
             
         }
 
@@ -199,6 +199,50 @@ public class ArrCharOps {
      */
     public static int compareTo(String str1, String str2) {
         // Replace the following statement with your code
-        return 0;
+     
+        if(str1.length() == str2.length()) {
+            boolean pass = true;
+            for(int i = 0; i < str1.length(); i++) {
+                if(str1.charAt(i) != str2.charAt(i)) {
+                    pass = false;
+                }
+             }
+
+             if(pass == true) {
+                return 0;
+             }
+          }
+        
+        if(str1.length() < str2.length()) { //if St1 is smaller, then Str2
+            for(int i = 0; i < str1.length(); i++) {
+                
+                if(str1.charAt(i) < str2.charAt(i)) {
+                    return -1;
+                }
+
+                if(str1.charAt(i) > str2.charAt(i)) {
+                    return 1;
+                }
+            }
+
+            return -1;
+        }
+        
+        if(str1.length() > str2.length()) { //if St1 is bigger, and Str2 is smaller
+            for(int i = 0; i < str2.length(); i++) {
+                
+                if(str1.charAt(i) < str2.charAt(i)) {
+                    return -1;
+                }
+
+                if(str1.charAt(i) > str2.charAt(i)) {
+                    return 1;
+                }
+            }
+
+            return 1;
+        }
+        
+        return -2;
     }
 }
