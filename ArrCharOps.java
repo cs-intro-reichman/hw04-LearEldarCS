@@ -201,45 +201,35 @@ public class ArrCharOps {
         // Replace the following statement with your code
      
         if(str1.length() == str2.length()) {
-            boolean pass = true;
             for(int i = 0; i < str1.length(); i++) {
-                if(str1.charAt(i) != str2.charAt(i)) {
-                    pass = false;
-                }
-             }
-
-             if(pass == true) {
-                return 0;
-             }
-          }
-        
-        if(str1.length() < str2.length()) { //if St1 is smaller, then Str2
-            for(int i = 0; i < str1.length(); i++) {
-                
-                if(str1.charAt(i) < str2.charAt(i)) {
+                if (str1.charAt(i) < str2.charAt(i)) {
                     return -1;
-                }
-
-                if(str1.charAt(i) > str2.charAt(i)) {
+                } else if (str1.charAt(i) > str2.charAt(i)) {
                     return 1;
+                    }
                 }
-            }
+           return 0; 
+        }
 
+        if(str1.length() < str2.length()) {
+            for(int i = 0; i < str1.length(); i++) {
+                if (str1.charAt(i) < str2.charAt(i)) {
+                    return -1;
+                } else if (str1.charAt(i) > str2.charAt(i)) {
+                    return 1;
+                    }
+                }
             return -1;
         }
-        
-        if(str1.length() > str2.length()) { //if St1 is bigger, and Str2 is smaller
+
+        if(str1.length() > str2.length()) {
             for(int i = 0; i < str2.length(); i++) {
-                
-                if(str1.charAt(i) < str2.charAt(i)) {
+                if (str1.charAt(i) < str2.charAt(i)) {
                     return -1;
-                }
-
-                if(str1.charAt(i) > str2.charAt(i)) {
+                } else if (str1.charAt(i) > str2.charAt(i)) {
                     return 1;
+                    }
                 }
-            }
-
             return 1;
         }
         
