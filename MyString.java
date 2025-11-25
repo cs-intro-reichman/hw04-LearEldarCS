@@ -38,8 +38,6 @@ public class MyString {
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
         // Replace the following statement with your code
-        String lowerCaseStr1 = lowerCase(str1);
-        String lowerCaseStr2 = lowerCase(str2);
         
         int len1 = str1.length();
         int len2 = str2.length();
@@ -50,7 +48,7 @@ public class MyString {
         for(int i = 0; i <= len1 - len2; i++) {
             boolean match = true;
             for(int j = 0; j < len2; j++) {
-                if(lowerCaseStr1.charAt(i+j) != lowerCaseStr2.charAt(j)) {
+                if(str1.charAt(i+j) != str2.charAt(j)) {
                     match = false;
                     break;
                 }
