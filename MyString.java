@@ -41,24 +41,20 @@ public class MyString {
         String lowerCaseStr1 = lowerCase(str1);
         String lowerCaseStr2 = lowerCase(str2);
         
-        int outerLoop = lowerCaseStr1.length() - lowerCaseStr2.length();
+        int len1 = lowerCaseStr1.length();
+        int len2 = lowerCaseStr2.length();
 
-        for(int i = 0; i <= outerLoop; i++) {
+        for(int i = 0; i <= len1 - len2; i++) {
             boolean math = true;
 
-            for(int j = 0; j < lowerCaseStr2.length(); j++) {
-                    if(lowerCaseStr1.charAt(i + j) != lowerCaseStr2.charAt(j)) {
-                        math = false;
-                        break;
-                    }
+            for(int j = 0; j < len2; j++) {
+                if(lowerCaseStr1.charAt(i+j) != lowerCaseStr2.charAt(j)) {
+                    math = false;
+                    break;
+                }
             }
-
-            if(math = false) {
-                return false;
-            }
-
+            if (math = true) return true;
         }
-
-        return true;
+        return false;    
     }
 }
