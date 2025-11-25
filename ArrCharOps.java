@@ -201,7 +201,52 @@ public class ArrCharOps {
         // Replace the following statement with your code
 
 
-        if(str1.length() == str2.length()) {
+            if (str1.length() == str2.length()) {
+                for (int i = 0; i < str1.length(); i++) {
+                    char ch1 = Character.toLowerCase(str1.charAt(i));
+                    char ch2 = Character.toLowerCase(str2.charAt(i));
+
+                        if (ch1 < ch2) {
+                            return -1;
+                        } else if (ch1 > ch2) {
+                            return 1;
+                        }
+                    }           
+                return 0;
+            }
+
+            if (str1.length() < str2.length()) {
+                for (int i = 0; i < str1.length(); i++) {
+                    char ch1 = Character.toLowerCase(str1.charAt(i));
+                    char ch2 = Character.toLowerCase(str2.charAt(i));
+
+                        if (ch1 < ch2) {
+                            return -1;
+                        }  else if (ch1 > ch2) {
+                            return 1;
+                        }
+                    }
+                return -1;
+            }
+
+            if (str1.length() > str2.length()) {
+                for (int i = 0; i < str2.length(); i++) {
+                    char ch1 = Character.toLowerCase(str1.charAt(i));
+                    char ch2 = Character.toLowerCase(str2.charAt(i));
+
+                        if (ch1 < ch2) {
+                            return -1;
+                        } else if (ch1 > ch2) {
+                            return 1;
+                        }
+                    }
+                return 1;
+                }
+    return -2; 
+    }
+}
+
+/*if(str1.length() == str2.length()) {
             for(int i = 0; i < str1.length(); i++) {
                 if (str1.charAt(i) < str2.charAt(i)) {
                     return -1;
@@ -234,6 +279,4 @@ public class ArrCharOps {
             return 1;
         }
         
-        return -2;
-    }
-}
+        return -2;*/
