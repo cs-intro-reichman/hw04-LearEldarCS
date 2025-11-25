@@ -47,7 +47,7 @@ public class MyString {
             boolean math = true;
 
             for(int j = 0; j < lowerCaseStr2.length(); j++) {
-                    if(lowerCaseStr1.charAt(i + j) != lowerCaseStr2.charAt(i)) {
+                    if(lowerCaseStr1.charAt(i + j) != lowerCaseStr2.charAt(j)) {
                         math = false;
                         break;
                     }
