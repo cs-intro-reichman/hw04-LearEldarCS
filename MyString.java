@@ -41,8 +41,8 @@ public class MyString {
         String lowerCaseStr1 = lowerCase(str1);
         String lowerCaseStr2 = lowerCase(str2);
         
-        int len1 = lowerCaseStr1.length();
-        int len2 = lowerCaseStr2.length();
+        int len1 = str1.length();
+        int len2 = str2.length();
 
         if (len2 == 0) return true;
         if(len2 > len1) return false;
