@@ -4,24 +4,14 @@ public class Primes {
         int N = Integer.parseInt(args[0]);
         int primeCounter = 0;
         boolean[] prime = new boolean[N];
-        for(int i = 0; i < N; i++) prime[i] = true;
+        for(int i = 0; i <= 1; i++) prime[i] = false;
+        for(int i = 2; i < N; i++) prime[i] = true;
 
-        for(int j = 0; j < N; j++) {
-            
-            if(j == 0 || j == 1) {
-                prime[j] = false;
-            }
-
-            if(j % 2 == 0 && j != 2) {
-                prime[j] = false;
-            }
-
-            if (j % 3 == 0 && j != 3) {
-                prime[j] = false;
-            }
-
-            if (j % 5 == 0 && j != 5) {
-                prime[j] = false;
+        for(int i = 2; i*i < N; i++) {
+            if (prime[i]) {
+                for(int j = i*i; j < N; j += i) {
+                    prime[j] = false;
+                }
             }
         }
 
