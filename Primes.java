@@ -5,9 +5,9 @@ public class Primes {
         int primeCounter = 0;
         boolean[] prime = new boolean[N+1];
         for(int i = 0; i <= 1; i++) prime[i] = false;
-        for(int i = 2; i < N; i++) prime[i] = true;
+        for(int i = 2; i <= N; i++) prime[i] = true;
 
-        for(int i = 2; i*i < N; i++) {
+        for(int i = 2; i*i <= N; i++) {
             if (prime[i]) {
                 for(int j = i*i; j < N; j += i) {
                     prime[j] = false;
@@ -17,7 +17,7 @@ public class Primes {
 
         System.out.println("Prime numbers up to " + N + ":");
 
-        for(int k = 0; k < N; k++) {
+        for(int k = 0; k <= N; k++) {
             if (prime[k] == true) {
                 System.out.println(k);
                 primeCounter++;
