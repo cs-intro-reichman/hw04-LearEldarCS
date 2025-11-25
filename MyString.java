@@ -44,18 +44,15 @@ public class MyString {
         int len1 = lowerCaseStr1.length();
         int len2 = lowerCaseStr2.length();
 
-        if (len2 == 0) return true;
-
         for(int i = 0; i <= len1 - len2; i++) {
-            boolean math = true;
-
+            boolean match = true;
             for(int j = 0; j < len2; j++) {
                 if(lowerCaseStr1.charAt(i+j) != lowerCaseStr2.charAt(j)) {
-                    math = false;
+                    match = false;
                     break;
                 }
             }
-            if (math = true) return true;
+            if (match == true) return true;
         }
         return false;    
     }
