@@ -3,7 +3,7 @@ public class Primes {
         // Replace this statement with your code
         int N = Integer.parseInt(args[0]);
         int primeCounter = 0;
-        boolean[] prime = new boolean[N];
+        boolean[] prime = new boolean[N+1];
         for(int i = 0; i <= 1; i++) prime[i] = false;
         for(int i = 2; i < N; i++) prime[i] = true;
 
