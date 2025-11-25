@@ -45,6 +45,7 @@ public class MyString {
         int len2 = lowerCaseStr2.length();
 
         if (len2 == 0) return true;
+        if(len2 > len1) return false;
 
         for(int i = 0; i <= len1 - len2; i++) {
             boolean match = true;
